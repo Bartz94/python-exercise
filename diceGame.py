@@ -1,3 +1,13 @@
+# Game rules
+# 1. Select players 2 to 4
+# 2.You can only roll the dice during your turn
+# 3. Rolling a 1 ends the turn and sets the turn score to zero
+# 4. If you are happy with the total result, you can skip rolling and save it to your total
+# 5. First one to exceed 50 points wins the game
+
+# to run type: python diceGame.py
+# Enjoy
+
 import random
 
 def roll():
