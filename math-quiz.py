@@ -1,8 +1,9 @@
 import random
+import time 
 
 MIN_DIGIT = 3
 MAX_DIGIT = 15
-OPERATORS = ["+", "-", "*"]
+OPERATORS = ["+", "-", "*", "/"]
 TOTAL_PROBLEMS_AMOUNT = 10
 
 def createMathProblem(): 
@@ -18,8 +19,10 @@ def createMathProblem():
 math_problem, answer = createMathProblem()
 
 wrong_answers = 0
-input('Press anything to start!')
+input('Press enter to start!')
 print('__________________________')
+
+start_time = time.time()
 
 for i in range(TOTAL_PROBLEMS_AMOUNT):
     math_problem, answer = createMathProblem()
@@ -31,5 +34,8 @@ for i in range(TOTAL_PROBLEMS_AMOUNT):
             wrong_answers += 1
             print('Nope...')
 
+end_time = time.time()
+quiz_time_duration = round(end_time - start_time, 2)
+
 print('__________________________')
-print('Good job! You have only failed' + ' ' + str(wrong_answers) + ' ' + 'times.')
+print('Good job! You have only failed' + ' ' + str(wrong_answers) + ' ' + 'times. The whole quiz took:' + ' ' + str(quiz_time_duration) + 'seconds.')
